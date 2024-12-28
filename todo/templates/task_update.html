@@ -1,0 +1,8 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css'%}">
+<h1>Edit Task</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update Task</button>
+</form>
